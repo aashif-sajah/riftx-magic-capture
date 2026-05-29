@@ -329,6 +329,7 @@ function Testimonials() {
   ];
   return (
     <section className="border-t border-border py-24 bg-navy-deep">
+      {null}
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <p className="font-mono text-xs uppercase tracking-[0.3em] text-gold mb-4">/ 04 — Word of mouth</p>
         <h2 className="text-4xl md:text-5xl font-bold mb-16 max-w-2xl">
