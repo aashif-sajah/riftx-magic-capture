@@ -309,9 +309,7 @@ function ServicesSection() {
 }
 
 /* ───────────────────────── TESTIMONIALS ───────────────────────── */
-function Testimonials() {
 
-}
 
 /* ─────────────────────── OTHER DOMAINS ─────────────────────── */
 const OTHER_DOMAINS: { name: string; price: number; tag?: string }[] = [
