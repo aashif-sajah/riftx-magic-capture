@@ -18,7 +18,7 @@ const MARKET_VALUE = 5800;
 export function DomainLanding() {
   const [open, setOpen] = useState(false);
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground">
       <Nav onBuy={() => setOpen(true)} />
       <Hero onBuy={() => setOpen(true)} />
       <WhySection />
@@ -36,13 +36,10 @@ export function DomainLanding() {
 /* ───────────────────────────── NAV ───────────────────────────── */
 function Nav({ onBuy }: { onBuy: () => void }) {
   return (
-    <header className="sticky top-0 z-30 backdrop-blur-md bg-background/70 border-b border-border">
+    <header className="sticky top-0 z-50 bg-background border-b border-border">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12 h-16 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-sm bg-gradient-gold grid place-items-center text-primary-foreground font-display font-bold">
-            D
-          </div>
-          <span className="font-display font-semibold tracking-tight">
+          <span className="font-display font-semibold tracking-tight text-xl">
             Domain<span className="text-gold">Cart</span>
           </span>
         </a>
@@ -53,7 +50,7 @@ function Nav({ onBuy }: { onBuy: () => void }) {
         </nav>
         <button
           onClick={onBuy}
-          className="text-sm font-medium px-4 py-2 rounded-sm border border-gold text-gold hover:bg-gold hover:text-primary-foreground transition"
+          className="text-sm font-medium px-4 py-2 rounded-sm border border-gold text-gold hover:bg-gold hover:text-black transition"
         >
           Acquire Domain
         </button>
@@ -484,10 +481,7 @@ function Footer() {
         <div className="grid md:grid-cols-12 gap-10">
           <div className="md:col-span-5">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-sm bg-gradient-gold grid place-items-center text-primary-foreground font-display font-bold">
-                D
-              </div>
-              <span className="font-display font-semibold">
+              <span className="font-display font-semibold text-xl">
                 Domain<span className="text-gold">Cart</span> LLC
               </span>
             </div>
