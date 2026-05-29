@@ -1,29 +1,18 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { DomainLanding } from "@/components/DomainLanding";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "KAERO.AE — Premium Domain for Sale | DomainCart LLC" },
+      { name: "description", content: "Own KAERO.AE — a premium 5-letter .AE domain. Estimated value $5,800. Yours for $1,299. SSL included, 12-hour transfer." },
+      { property: "og:title", content: "KAERO.AE is Available — $1,299" },
+      { property: "og:description", content: "Premium .AE domain. Short, memorable, brandable. Secure transfer within 12 hours." },
     ],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
+  return <DomainLanding />;
 }
