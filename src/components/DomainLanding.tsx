@@ -388,8 +388,7 @@ function OtherDomains({ onBuy }: { onBuy: () => void }) {
   );
 }
 
-/* duplicate Testimonials stub continues below — restore real impl */
-function _TestimonialsImpl() {
+function Testimonials() {
   const items = [
     {
       q: "Closed the deal in under a day. Transfer was clean, paperwork was clear, my new .AE was live before the weekend.",
