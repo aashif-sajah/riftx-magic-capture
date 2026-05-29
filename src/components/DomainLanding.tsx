@@ -5,7 +5,6 @@ import {
   ChevronDown,
   Lock,
   Loader2,
-  Mail,
   Shield,
   ShieldCheck,
   Sparkles,
