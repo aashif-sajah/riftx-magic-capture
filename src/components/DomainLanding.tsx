@@ -24,6 +24,7 @@ export function DomainLanding() {
       <WhySection />
       <IncludedSection onBuy={() => setOpen(true)} />
       <ServicesSection />
+      <OtherDomains onBuy={() => setOpen(true)} />
       <Testimonials />
       <FAQ />
       <Footer />
