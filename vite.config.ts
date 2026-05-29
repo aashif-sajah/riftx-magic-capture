@@ -10,7 +10,7 @@ export default defineConfig({
     tailwindcss(),
     tanstackStart({ server: { entry: "server" } }),
     react(),
-    nitro({ preset: "netlify" }),
+    nitro(),
     tsconfigPaths(),
   ],
 });
