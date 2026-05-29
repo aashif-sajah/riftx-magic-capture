@@ -24,6 +24,7 @@ export function DomainLanding() {
       <WhySection />
       <IncludedSection onBuy={() => setOpen(true)} />
       <ServicesSection />
+      <OtherDomains onBuy={() => setOpen(true)} />
       <Testimonials />
       <FAQ />
       <Footer />
@@ -308,6 +309,85 @@ function ServicesSection() {
 }
 
 /* ───────────────────────── TESTIMONIALS ───────────────────────── */
+
+
+/* ─────────────────────── OTHER DOMAINS ─────────────────────── */
+const OTHER_DOMAINS: { name: string; price: number; tag?: string }[] = [
+  { name: "zafir.ae", price: 2450, tag: "Hot" },
+  { name: "noora.ae", price: 3100 },
+  { name: "rayan.ae", price: 1899 },
+  { name: "tamra.ae", price: 1499 },
+  { name: "qasr.ae", price: 4200, tag: "Premium" },
+  { name: "hawa.ae", price: 1750 },
+  { name: "lumen.ae", price: 2999 },
+  { name: "mirai.ae", price: 2275 },
+  { name: "saba.ae", price: 3850 },
+  { name: "vela.ae", price: 1650 },
+  { name: "orix.ae", price: 1299 },
+  { name: "nexa.ae", price: 4750, tag: "Premium" },
+  { name: "kavi.ae", price: 1099 },
+  { name: "duna.ae", price: 2199 },
+  { name: "amber.ae", price: 5600, tag: "Top tier" },
+  { name: "siraj.ae", price: 2890 },
+  { name: "olea.ae", price: 1950 },
+  { name: "yara.ae", price: 3400 },
+  { name: "korra.ae", price: 1599 },
+  { name: "halia.ae", price: 2725 },
+];
+
+function OtherDomains({ onBuy }: { onBuy: () => void }) {
+  return (
+    <section id="other-domains" className="border-t border-border py-24 bg-navy-mid">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+        <div className="flex items-end justify-between mb-12 flex-wrap gap-6">
+          <div>
+            <p className="font-mono text-xs uppercase tracking-[0.3em] text-gold mb-4">
+              / 04 — Other .AE Domains
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold max-w-xl">
+              Browse the rest of our UAE inventory.
+            </h2>
+          </div>
+          <span className="font-mono text-xs text-muted-foreground">
+            20 / LISTED
+          </span>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border border border-border">
+          {OTHER_DOMAINS.map((d, i) => (
+            <button
+              key={d.name}
+              onClick={onBuy}
+              className="bg-background p-6 text-left hover:bg-navy-deep transition group flex flex-col gap-4"
+            >
+              <div className="flex items-start justify-between">
+                <span className="font-mono text-[10px] text-muted-foreground">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                {d.tag && (
+                  <span className="font-mono text-[10px] uppercase tracking-widest text-gold border border-gold px-2 py-0.5">
+                    {d.tag}
+                  </span>
+                )}
+              </div>
+              <div className="font-display text-2xl font-bold tracking-tight">
+                {d.name.split(".")[0]}
+                <span className="text-gold">.ae</span>
+              </div>
+              <div className="flex items-end justify-between mt-auto pt-2 border-t border-border">
+                <span className="font-mono text-lg text-foreground">
+                  ${d.price.toLocaleString()}
+                </span>
+                <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-gold group-hover:translate-x-1 transition" />
+              </div>
+            </button>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Testimonials() {
   const items = [
     {
