@@ -18,7 +18,7 @@ const MARKET_VALUE = 5800;
 export function DomainLanding() {
   const [open, setOpen] = useState(false);
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden w-full">
       <Nav onBuy={() => setOpen(true)} />
       <Hero onBuy={() => setOpen(true)} />
       <WhySection />
@@ -246,14 +246,16 @@ function IncludedSection({ onBuy }: { onBuy: () => void }) {
             {rows.map((r, idx) => (
               <div
                 key={r.k}
-                className="grid grid-cols-12 items-center py-6 border-b border-border group hover:bg-white/[0.02] px-4 -mx-4 rounded-md transition-colors duration-300"
+                className="flex flex-col md:flex-row md:items-center py-6 border-b border-border group hover:bg-white/[0.02] px-4 -mx-4 rounded-md transition-colors duration-300 gap-2 md:gap-4"
               >
-                <span className="col-span-1 font-mono text-xs text-muted-foreground">
-                  0{idx + 1}
-                </span>
-                <span className="col-span-4 font-display text-lg">{r.k}</span>
-                <span className="col-span-6 text-muted-foreground">{r.v}</span>
-                <Check className="col-span-1 w-5 h-5 text-gold justify-self-end" />
+                <div className="flex items-center gap-4 md:w-5/12">
+                  <span className="font-mono text-xs text-muted-foreground w-6">
+                    0{idx + 1}
+                  </span>
+                  <span className="font-display text-lg">{r.k}</span>
+                </div>
+                <span className="text-muted-foreground flex-1 ml-10 md:ml-0 text-sm md:text-base">{r.v}</span>
+                <Check className="w-5 h-5 text-gold shrink-0 hidden md:block" />
               </div>
             ))}
           </div>
@@ -511,7 +513,7 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-16 pt-8 border-t border-border flex flex-wrap justify-between items-center gap-4 text-xs font-mono text-muted-foreground">
+        <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left text-xs font-mono text-muted-foreground">
           <span>© 2026 DomainCart LLC. All rights reserved.</span>
           <span>riftx.ae · listed at ${PRICE.toLocaleString()}</span>
         </div>
