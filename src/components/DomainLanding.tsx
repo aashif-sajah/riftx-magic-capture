@@ -199,10 +199,10 @@ function WhySection() {
 
         <div className="grid md:grid-cols-2 gap-px bg-border">
           {items.map((i) => (
-            <div key={i.n} className="bg-background p-10 group hover:bg-navy-mid transition">
+            <div key={i.n} className="bg-background p-10 group hover:-translate-y-1 hover:shadow-2xl hover:shadow-gold/5 transition-all duration-300">
               <div className="flex items-start justify-between mb-8">
                 <span className="font-mono text-xs text-muted-foreground">{i.n}</span>
-                <div className="w-10 h-10 border border-border group-hover:border-gold transition rounded-sm grid place-items-center">
+                <div className="w-10 h-10 border border-border group-hover:border-gold/50 group-hover:bg-gold/5 transition-colors duration-300 rounded-sm grid place-items-center">
                   <Sparkles className="w-4 h-4 text-gold" />
                 </div>
               </div>
@@ -246,7 +246,7 @@ function IncludedSection({ onBuy }: { onBuy: () => void }) {
             {rows.map((r, idx) => (
               <div
                 key={r.k}
-                className="grid grid-cols-12 items-center py-6 border-b border-border group hover:px-3 transition-all"
+                className="grid grid-cols-12 items-center py-6 border-b border-border group hover:bg-white/[0.02] px-4 -mx-4 rounded-md transition-colors duration-300"
               >
                 <span className="col-span-1 font-mono text-xs text-muted-foreground">
                   0{idx + 1}
@@ -288,12 +288,12 @@ function ServicesSection() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
           {services.map((s, idx) => (
-            <div key={s.t} className="bg-background p-8 hover:bg-navy-mid transition group">
+            <div key={s.t} className="bg-background p-8 hover:-translate-y-1 hover:shadow-2xl hover:shadow-gold/5 transition-all duration-300 group">
               <div className="flex items-center justify-between mb-12">
                 <span className="font-mono text-xs text-muted-foreground">
                   0{idx + 1}
                 </span>
-                <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-gold group-hover:-rotate-45 transition" />
+                <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-gold group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
               </div>
               <h3 className="font-display text-xl font-semibold mb-2">{s.t}</h3>
               <p className="text-sm text-muted-foreground">{s.d}</p>
@@ -355,7 +355,7 @@ function OtherDomains({ onBuy }: { onBuy: () => void }) {
             <button
               key={d.name}
               onClick={onBuy}
-              className="bg-background p-6 text-left hover:bg-navy-deep transition group flex flex-col gap-4"
+              className="bg-background p-6 text-left hover:border-gold/30 hover:shadow-lg hover:shadow-gold/5 transition-all duration-300 group flex flex-col gap-4"
             >
               <div className="flex items-start justify-between">
                 <span className="font-mono text-[10px] text-muted-foreground">
@@ -371,11 +371,11 @@ function OtherDomains({ onBuy }: { onBuy: () => void }) {
                 {d.name.split(".")[0]}
                 <span className="text-gold">.ae</span>
               </div>
-              <div className="flex items-end justify-between mt-auto pt-2 border-t border-border">
+              <div className="flex items-end justify-between mt-auto pt-2 border-t border-border group-hover:border-gold/30 transition-colors duration-300">
                 <span className="font-mono text-lg text-foreground">
                   ${d.price.toLocaleString()}
                 </span>
-                <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-gold group-hover:translate-x-1 transition" />
+                <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-gold group-hover:translate-x-1 transition-transform duration-300" />
               </div>
             </button>
           ))}
@@ -512,7 +512,7 @@ function Footer() {
           </div>
         </div>
         <div className="mt-16 pt-8 border-t border-border flex flex-wrap justify-between items-center gap-4 text-xs font-mono text-muted-foreground">
-          <span>© 2024 DomainCart LLC. All rights reserved.</span>
+          <span>© 2026 DomainCart LLC. All rights reserved.</span>
           <span>riftx.ae · listed at ${PRICE.toLocaleString()}</span>
         </div>
       </div>
