@@ -11,7 +11,7 @@ import {
   X,
 } from "lucide-react";
 
-const DOMAIN = "kaero.ae";
+const DOMAIN = "riftx.ae";
 const PRICE = 1299;
 const MARKET_VALUE = 5800;
 
@@ -80,7 +80,7 @@ function Hero({ onBuy }: { onBuy: () => void }) {
             </p>
             <h1 className="font-display font-bold leading-[0.95] tracking-tighter">
               <span className="block text-5xl md:text-7xl lg:text-[8rem] text-foreground">
-                KAERO
+                RIFTX
               </span>
               <span className="block text-5xl md:text-7xl lg:text-[8rem] text-gold -mt-2">
                 .AE
@@ -146,7 +146,7 @@ function Hero({ onBuy }: { onBuy: () => void }) {
                     <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
                   </div>
                   <div className="font-display text-2xl md:text-3xl font-bold mb-1">
-                    kaero<span className="text-gold">.ae</span>
+                    riftx<span className="text-gold">.ae</span>
                   </div>
                   <div className="text-xs text-muted-foreground mb-5">
                     Registered · UAE TLD · Clean WHOIS
@@ -188,7 +188,7 @@ function WhySection() {
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-12 gap-12 mb-16">
           <div className="lg:col-span-4">
-            <p className="font-mono text-xs uppercase tracking-[0.3em] text-gold mb-4">/ 01 — Why kaero.ae</p>
+            <p className="font-mono text-xs uppercase tracking-[0.3em] text-gold mb-4">/ 01 — Why riftx.ae</p>
           </div>
           <div className="lg:col-span-8">
             <h2 className="text-4xl md:text-6xl font-bold leading-tight">
@@ -513,7 +513,7 @@ function Footer() {
         </div>
         <div className="mt-16 pt-8 border-t border-border flex flex-wrap justify-between items-center gap-4 text-xs font-mono text-muted-foreground">
           <span>© 2024 DomainCart LLC. All rights reserved.</span>
-          <span>kaero.ae · listed at ${PRICE.toLocaleString()}</span>
+          <span>riftx.ae · listed at ${PRICE.toLocaleString()}</span>
         </div>
       </div>
     </footer>
