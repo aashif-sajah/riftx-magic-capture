@@ -32,3 +32,17 @@ dist-ssr
 *.sw?
 .netlify
 .vercel
+node_modules/
+.env
+.env.*
+!.env.example
+.next/
+.expo/
+.vercel/
+.turbo/
+__pycache__/
+venv/
+.venv/
+xcuserdata/
+DerivedData/
+Pods/
